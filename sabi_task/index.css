@@ -1,0 +1,261 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI",  sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  padding: 20px 0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #7b68ee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #6352d4;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #7b68ee;
+}
+
+.hero {
+  padding: 80px 0 60px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: #2d2d2d;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon.github {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-icon.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.social-icon.google {
+  background-color: #db4437;
+  color: #fff;
+}
+
+.social-icon.gitlab {
+  background-color: #fc6d26;
+  color: #fff;
+}
+
+.social-icon.facebook {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: #7b68ee;
+  color: #fff;
+  border-color: #7b68ee;
+}
+
+.btn-primary:hover {
+  background-color: #6352d4;
+  border-color: #6352d4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(123, 104, 238, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #7b68ee;
+  border-color: #7b68ee;
+}
+
+.btn-secondary:hover {
+  background-color: #7b68ee;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.illustration svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+    font-size: 0.85rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
